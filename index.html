@@ -6,7 +6,7 @@
 <!--[if IE 8 ]> <html lang="en-US" class="no-js ie8 oldie"> <![endif]-->
 <!--[if IE 9 ]> <html lang="en-US" class="no-js ie9 oldie"> <![endif]-->
 <!--[if (gte IE 10)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html lang="en-US" class="no-js"><!--<![endif]-->
-
+<html ng-app="siteGeneratorStaticsConsumerApp">
 <head>
 
 <meta charset="UTF-8" />
@@ -40,6 +40,78 @@ document.addEventListener('visibilitychange', window.measureTimeInTab);
 <!--  -->
 <link rel="stylesheet" href="https://static.parastorage.com/services/site-generator-statics-consumer/1.779.5/styles/main-new.css">
 <!--  -->
+<script type="text/javascript">
+</script>
+<script type="text/javascript">
+//fix cross domain issue
+document.domain = window.location.hostname.split('.').slice(-2).join('.');
+
+		window.onerror = function () {
+		window.onerror.errors.push([].slice.call(arguments));
+		};
+		window.onerror.errors = [];
+
+// fedops
+   (function () {
+   var appName = 'site-generator-statics-consumer';
+       window.fedops = window.fedops || {};
+       window.fedops.apps = window.fedops.apps || {};
+       window.fedops.apps[appName] = { startLoadTime: performance.now() };
+       window.fedops = window.fedops || {};
+   window.fedops.sessionId = window.localStorage.getItem('fedops.logger.sessionId') || 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,
+       function(c) { var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8); return v.toString(16); });
+    (new Image()).src = '//frog.wix.com/fed?appName=' + appName + '&src=72&evid=14&session_id=' + window.fedops.sessionId;
+        })();
+</script>
+  
+</head>
+<body assistant-stop-on-escape ng-controller="AppCtrl as $ctrl" data-state="{{$ctrl.state}}" ng-class="{'assistant-on': $ctrl.isAssistantOn}">
+
+<app-main> <!-- Ui views didnt work in a template for some reason -->
+<div class="content">
+		<builder></builder>
+		<div class="content-inner" ui-view="" state-class=""></div>
+</div>
+</app-main>  
+<script src="//www.wix.com/_partials/media-gallery-g5/1.423.0/scripts/media-frame.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?client=gme-wixcomltd&libraries=places&language=en" async defer></script>
+
+<script src="https://static.parastorage.com/services/third-party/jquery/2.2.4/dist/jquery.min.js"></script>
+<script src="https://static.parastorage.com/services/third-party/angularjs/1.5.9/angular.min.js"></script>
+<script src="https://static.parastorage.com/services/third-party/angular-translate/1.1.1/angular-translate.min.js"></script>
+<script src="https://static.parastorage.com/services/third-party/angularjs/1.5.9/i18n/angular-locale_en.js"></script>
+<script src="https://static.parastorage.com/services/third-party/angularjs/1.5.9/angular-animate.min.js"></script>
+<script src="https://static.parastorage.com/services/third-party/angularjs/1.5.9/angular-aria.min.js"></script>
+<script src="https://static.parastorage.com/services/third-party/angularjs/1.5.9/angular-messages.min.js"></script>
+<script src="https://static.parastorage.com/services/third-party/angularjs/1.5.9/angular-sanitize.min.js"></script>
+<script src="//static.parastorage.com/services/site-generator-statics-metadata/1.40.0/scripts/scripts.js"></script>
+
+<script src="https://static.parastorage.com/services/third-party/angular-material/1.1.0-rc.5/angular-material.min.js"></script>
+<script src="https://static.parastorage.com/services/site-generator-statics-consumer/1.779.5/bower_components/wix-richtext.git/NoUIBundleWixRichText.js"></script>
+
+<!--  -->
+<script src="https://static.parastorage.com/services/site-generator-statics-consumer/1.779.5/scripts/modules.js"></script>
+<!--  -->
+
+<!--  -->
+<script src="https://static.parastorage.com/services/site-generator-statics-consumer/1.779.5/scripts/scripts.js"></script>
+<!--  -->
+
+<!--  -->
+<script src="https://static.parastorage.com/services/site-generator-statics-consumer/1.779.5/scripts/locale/messages_en.js"></script>
+<!--  -->
+<script>
+	function fixOrigin(url) {
+		if (url.indexOf('://www.') === -1) {
+			return url;
+		} else {
+			return url.replace(/:\/\/www\./g, '://' + window.location.host.substr(0, window.location.host.indexOf('.')) + '.');
+		}
+	}
+	angular.module('siteGeneratorCommon').constant('clientTopology', {
+		production: 'false' !== 'true',
+		staticsUrl: 'https://static.parastorage.com/services/site-generator-statics-consumer/1.779.5/',
+		experiments:   
 .constant('metaDataBaseUrl', '//static.parastorage.com/services/site-generator-statics-metadata/1.40.0/')
 .constant('metaDataUrl', '//static.parastorage.com/services/site-generator-statics-metadata/1.40.0/scripts')
 .constant('metaDataVersion', '')

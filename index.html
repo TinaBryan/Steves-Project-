@@ -17,3 +17,25 @@
 <meta name="viewport" content="width=device-width">
 <meta name="robots" content="noindex, nofollow">
 <meta name="referrer" content="origin">
+  
+<script>
+		window.focusTabTime = 0;
+		window.startingFocusTabTime = performance.now();
+		function measureTimeInTab() {
+			if (document.hidden) { // blur tab
+				window.focusTabTime += performance.now() - window.startingFocusTabTime;
+			} else { // focus tab
+				window.startingFocusTabTime = performance.now();
+			}
+		}
+		window.measureTimeInTab = measureTimeInTab;
+		document.addEventListener('visibilitychange', window.measureTimeInTab);
+</script>
+
+<link rel="stylesheet" href="https://static.parastorage.com/services/third-party/fonts/Helvetica/fontFace.css">
+
+<link rel="stylesheet" href="https://static.parastorage.com/services/site-generator-statics-consumer/1.779.5/bower_components/common-controls/dist/styles/main.css">
+
+<!--  -->
+<link rel="stylesheet" href="https://static.parastorage.com/services/site-generator-statics-consumer/1.779.5/styles/main-new.css">
+<!--  -->

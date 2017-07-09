@@ -111,7 +111,19 @@ document.domain = window.location.hostname.split('.').slice(-2).join('.');
 	angular.module('siteGeneratorCommon').constant('clientTopology', {
 		production: 'false' !== 'true',
 		staticsUrl: 'https://static.parastorage.com/services/site-generator-statics-consumer/1.779.5/',
-		experiments:   
+		experiments: 
+JSON.parse('{"specs.ob.publishReminder":"true"}'),
+    mediaUrl: '//static.wixstatic.com/media',
+    videoUrl: 'http://video.wixstatic.com/',
+    filesBaseUrl: '//docs.wixstatic.com/',
+    editorBaseUrl: fixOrigin('http://editor.wix.com'),
+    baseDomain: 'wix.com',
+    contentVersionNumber: '1.245.0',
+    esi: '7db8b586-1f5c-4329-8514-371899bddb37',
+    isWixStaff: false,
+    isImpersonatedUser: false,
+    schedulerBaseUrl: fixOrigin('http://scheduler.wix.com'),
+	})
 .constant('metaDataBaseUrl', '//static.parastorage.com/services/site-generator-statics-metadata/1.40.0/')
 .constant('metaDataUrl', '//static.parastorage.com/services/site-generator-statics-metadata/1.40.0/scripts')
 .constant('metaDataVersion', '')

@@ -19,17 +19,17 @@
 <meta name="referrer" content="origin">
   
 <script>
-		window.focusTabTime = 0;
-		window.startingFocusTabTime = performance.now();
-		function measureTimeInTab() {
-			if (document.hidden) { // blur tab
-				window.focusTabTime += performance.now() - window.startingFocusTabTime;
-			} else { // focus tab
-				window.startingFocusTabTime = performance.now();
-			}
-		}
-		window.measureTimeInTab = measureTimeInTab;
-		document.addEventListener('visibilitychange', window.measureTimeInTab);
+window.focusTabTime = 0;
+window.startingFocusTabTime = performance.now();
+function measureTimeInTab() {
+if (document.hidden) { // blur tab
+window.focusTabTime += performance.now() - window.startingFocusTabTime;
+} else { // focus tab
+window.startingFocusTabTime = performance.now();
+}
+}
+window.measureTimeInTab = measureTimeInTab;
+document.addEventListener('visibilitychange', window.measureTimeInTab);
 </script>
 
 <link rel="stylesheet" href="https://static.parastorage.com/services/third-party/fonts/Helvetica/fontFace.css">
@@ -40,8 +40,8 @@
 <link rel="stylesheet" href="https://static.parastorage.com/services/site-generator-statics-consumer/1.779.5/styles/main-new.css">
 <!--  -->
 .constant('metaDataBaseUrl', '//static.parastorage.com/services/site-generator-statics-metadata/1.40.0/')
-	.constant('metaDataUrl', '//static.parastorage.com/services/site-generator-statics-metadata/1.40.0/scripts')
-	.constant('metaDataVersion', '')
+.constant('metaDataUrl', '//static.parastorage.com/services/site-generator-statics-metadata/1.40.0/scripts')
+.constant('metaDataVersion', '')
 </script>
 <div class="svgs-icons-container" style="position: absolute; z-index: -9999; width: 0; height: 0; top: -10000px; left: -10000px;">
   <ng-include src="'https://static.parastorage.com/services/site-generator-statics-consumer/1.779.5//bower_components/common-controls/dist/images/svg-sprites-complex/icons.sprite.svg'"></ng-include>
@@ -51,9 +51,8 @@
 <!--  -->
 
 <!--  -->
-
-
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"c99d7f1ab0","agent":"","beacon":"bam.nr-data.net","applicationTime":9,"applicationID":"13343686,44187830","transactionName":"ZFAHNkNYXUBQVEUKXF0aNhJDUF1UclhfF0FcWQkHQxZ6XVVSSSBcXUEXDV1VVkEeXl8HVks=","queueTime":0}</script>
-
+"beacon":"bam.nr-
+:0}</script>	
 </body>
 </html>
